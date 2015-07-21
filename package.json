@@ -1,6 +1,6 @@
 {
   "name": "angular-ifrau",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "angular services for iframe based free range apps",
   "scripts": {
     "test": "jshint . && jscs ."
