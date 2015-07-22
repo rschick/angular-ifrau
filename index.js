@@ -46,6 +46,10 @@ angular.module('angular-ifrau', [
 				});
 			}
 
+			function request(type, options) {
+				return client.request(type, options);
+			}
+
 			function navigate(url) {
 				client.navigate(url);
 			}
@@ -55,6 +59,7 @@ angular.module('angular-ifrau', [
 			this.conf = conf;
 			this.navigate = navigate;
 			this.connect = connect;
+			this.request = request;
 		}
 
 		return new AppHost();
