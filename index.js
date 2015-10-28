@@ -54,12 +54,17 @@ angular.module('angular-ifrau', [
 				client.navigate(url);
 			}
 
+			function getService(serviceType, version) {
+				return client.getService(serviceType, version);
+			}
+
 			this.sendEvent = sendEvent;
 			this.sendMessage = sendMessage;
 			this.conf = conf;
 			this.navigate = navigate;
 			this.connect = connect;
 			this.request = request;
+			this.getService = getService;
 		}
 
 		return new AppHost();
