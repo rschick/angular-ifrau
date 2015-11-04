@@ -5,11 +5,11 @@ angular.module('angular-ifrau', [
 
 	var conf = {};
 	var client;
-	var ifrau;
+	var ifrauClient;
 	var connected = false;
 
-	function connect(_ifrau) {
-		ifrau = _ifrau;
+	function connect(_ifrauClient) {
+		ifrauClient = _ifrauClient;
 	}
 
 	this.connect = connect;
@@ -25,7 +25,7 @@ angular.module('angular-ifrau', [
 				}
 
 				var defer = $q.defer();
-				client = new ifrau.Client();
+				client = new ifrauClient();
 				client.onEvent('cabinet.frapps.config', function(config) {
 					connected = true;
 					conf = _.assign(conf, config);
