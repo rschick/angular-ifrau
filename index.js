@@ -14,7 +14,7 @@ angular.module('angular-ifrau', [
 
 	this.connect = connect;
 
-	this.$get = function AppHostFactory($q) {
+	this.$get = ['$q', function AppHostFactory($q) {
 
 		function AppHost() {
 
@@ -68,6 +68,5 @@ angular.module('angular-ifrau', [
 		}
 
 		return new AppHost();
-	};
+	}];
 });
-
